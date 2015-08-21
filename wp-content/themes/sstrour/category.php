@@ -17,7 +17,7 @@
         <!-- CONTENEDOR PRINCIPAL -->
         <div class="col s12 m10 l10">
 	        <?php if ( have_posts() ) : 
-	        	the_archive_title( '<h5 class="page-title">', '</h5>' );
+	        	the_archive_title( '<blockquote><h5 class="page-title">', '</h5></blockquote>' );
 	        	the_archive_description( '<div class="taxonomy-description">', '</div>' );
 	    	?>
 	    	<?php while ( have_posts() ) : the_post(); ?>
@@ -36,10 +36,13 @@
 			    	</div>
 			    	<div class="card-content">
 			    		<span class="left-align card-category">
-				    		<?php the_category($post_id->ID_post) ?>
-				    		<span class="right">
+			    			<blockquote>
+				    			<?php the_category($post_id->ID_post) ?>
+				    			<span class="right">
 				    			<b><?php echo get_post_meta($post->ID, "Fecha", $single = true); ?></b>
 				    		</span> 
+				    		</blockquote>
+				    		
 				    	</span><?php echo get_excerpt(100); ?>
 				    </div>
 			    	<div class="card-action">
