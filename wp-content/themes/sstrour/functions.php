@@ -1,7 +1,7 @@
 <?php
 // Registro del menú de WordPress
 
-add_theme_support( 'nav-menus' );
+add_theme_support( 'menus' );
 
 if ( function_exists( 'register_nav_menus' ) ) {
     register_nav_menus(
@@ -27,7 +27,7 @@ add_theme_support('post-thumbnails');
 // Add Interface custom image sizes
 	add_image_size( 'featured', 320, 195, true );
 	add_image_size( 'featured-medium', 650, 450, true );
-	add_image_size( 'slider-narrow', 1038, 500, true ); 		// used on Featured Slider on Homepage Header for narrow layout
+	add_image_size( 'slider-narrow', 1038, 330, true ); 		// used on Featured Slider on Homepage Header for narrow layout
 	add_image_size( 'slider-wide', 1440, 500, true ); 			// used on Featured Slider on Homepage Header for wide layout
 	add_image_size( 'gallery', 474, 342, true ); 				// used to show gallery all images
 	add_image_size( 'icon', 100, 100, true );					//used for icon on business layout
@@ -72,4 +72,65 @@ register_sidebar(array(
         'before_title' => '<h3>',
         'after_title' => '</h3>',
     ));
+
+register_sidebar(array(
+        'name' => 'Footer_1',
+        'description' => 'Footer 1',
+        'before_widget' => '<section class="widget">',
+        'after_widget' => '</section>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ));
+
+register_sidebar(array(
+        'name' => 'Footer_2',
+        'description' => 'Footer 2',
+        'before_widget' => '<section class="widget">',
+        'after_widget' => '</section>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ));
+
+register_sidebar(array(
+        'name' => 'Footer_3',
+        'description' => 'Footer 3',
+        'before_widget' => '<section class="widget">',
+        'after_widget' => '</section>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ));
+
+register_sidebar(array(
+        'name' => 'Footer_4',
+        'description' => 'Footer 4',
+        'before_widget' => '<section class="widget">',
+        'after_widget' => '</section>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ));
+
+/////////////////////////////////////////////////////////////////
+// Info
+function infobox( $atts, $content = null, $code = "" ) {
+
+  // get attibutes and set defaults
+        extract(shortcode_atts(array(
+                'icon' => 'No especificado',
+                'contenido' => 'No especificado'
+       ), $atts));
+
+    $return = '<div class="info-contact"><i class="material-icons">'.$icon.'</i> ';
+    $return .= $content;
+    $return .= '<hr></div>';
+    return $return;
+}
+
+// El ShortCode
+add_shortcode( 'info', 'infobox' );
+
+
+function shortcode_gracias() {
+  return '<p>¡Gracias por leer mi blog!, si te gustó suscríbete al feed RSS</p>';
+}
+add_shortcode('gracias', 'shortcode_gracias');
 ?>

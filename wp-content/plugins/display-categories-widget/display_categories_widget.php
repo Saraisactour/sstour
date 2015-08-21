@@ -114,11 +114,11 @@ if($instance['show_format']==0)
 {
   echo "<style>.dcw_c1 {float:left; width:100%} .dcw_c2 {float:left; width:50%} .dcw_c3 {float:left; width:33%}</style>";
 	
-  echo "<ul class='collection'>"; 
-	wp_list_categories('orderby=name&show_count='.$showcount_value.'&child_of='.$cat_id.'&hide_empty='.$display_empty_categories.'&title_li=&number='.$dcw_limit);
-  echo "</ul>";
+  echo "<div class='collection'>"; 
+	wp_list_categories('orderby=name&show_count=0&child_of=0&hide_empty='.$display_empty_categories.'&title_li=&number='.$dcw_limit);
+  echo "</div>";
   $class_definer="dcw_c".$instance['dcw_column'];
-  echo "<script>jQuery('ul.collection').find('li').addClass('collection-item');</script>";
+  echo "<script>jQuery('div.collection').find('a').addClass('collection-item');</script>";
 }
 if($instance['show_format']==2) 
 {

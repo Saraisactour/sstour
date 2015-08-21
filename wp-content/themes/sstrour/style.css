@@ -15,6 +15,9 @@ body{
   .card-title a{
   	color: #F2F5F5 !important;
   }
+  a span{
+    color: #565656 !important;
+  }
   .btn{
     color: white !important;
   }
@@ -55,4 +58,84 @@ body{
   .dynamic_sidebar{
     margin-top: 5%;
  }
- 
+ .card-category{
+  font-size: 14px;
+ }
+ .card-category ul{
+  margin: 0;
+  margin-top: -4%;
+ }
+ .card-category span{
+  margin-top: -6%;
+ }
+ .advps-excerpt-block-one{
+  margin-bottom: 40%;
+ }
+ .btn_slider{
+  opacity: 0.9;
+  margin-left: -68px !important;
+ }
+ .advs-title{
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 5% !important;
+ }
+ .widget h3{
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.64rem !important;
+  color: rgba(0,0,0,.7);
+ }
+ .page-footer .container .textwidget{
+  margin-bottom: 5%;
+ }
+ .info-contact{
+  font-size: 12px;
+  color: rgba(0,0,0,.7);
+ }
+ .tagcloud a{
+  color: rgba(0,0,0,.7);
+ }
+ #toTop { 
+  display:none; 
+  text-decoration:none; 
+  position:fixed; 
+  bottom:30px; 
+  right:30px; 
+  overflow:hidden; 
+  width:40px; 
+  height:40px; 
+  border:none; 
+  text-indent:100%; 
+  background:url(images/ui.totop.png) no-repeat left top; 
+  z-index:9999; 
+} 
+#toTopHover { 
+  background:url(images/ui.totop.png) no-repeat left -40px;
+   width:40px; 
+   height:40px; 
+   display:block; 
+   overflow:hidden; 
+   float:left; 
+   opacity: 0; 
+   -moz-opacity: 0; 
+   filter:alpha(opacity=0); 
+ } 
+ #toTop:active, #toTop:focus { outline:none;  } 
+
+ .cnss-social-icon{
+  padding-top: 6% !important;
+ }
+ .card .conte-card{
+  padding-left: 2px !important;
+  padding-right: 2px !important;
+ }
+ #single .card-title{
+  position: absolute;
+  margin-top: -7%;
+  margin-left: 1%;
+  font-weight: 300 !important;
+ }
+ .reser{
+      padding-bottom: 2% !important;
+ }
