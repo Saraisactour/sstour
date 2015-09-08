@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us11.list-manage.com","uuid":"2fa9af3692ca5d4eaad977815","lid":"0785e856d9"}) })</script>
   <section id="main" class="section scrollspy">
 	<div class="row">
 		<!-- BARRA IZQUIERDA -->
@@ -14,9 +14,9 @@
 				<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Left Sidebar')) : endif; ?>
 			</div>
 			<br>
-			<a class="btn waves-effect waves-light green condensed" href="#">Alle Saugroboter</a>
-			<a class="btn waves-effect waves-light blue condensed" href="#">Saugroboter-Vergleich</a>
-			<img src="http://www.saraisactour.com.ve/wp-content/uploads/2015/08/10731206_536512903152774_766969267735247532_n.jpg" width="100%" height="200px">
+			<a class="btn waves-effect waves-light green condensed" href="#">Franquicias</a>
+          	<a class="btn waves-effect waves-light blue condensed" href="#">Nuestro Equipo</a>
+			<img class="hide-on-small-only" src="<?php bloginfo('url'); ?>/wp-content/uploads/2015/08/10731206_536512903152774_766969267735247532_n.jpg" width="100%" height="200px">
 		</div>
 		<!-- FIN BARRA IZQUIERDA -->
 
@@ -34,7 +34,7 @@
 			        <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Slider_header')) : endif; ?>
 			      </div>
 			      <br>
-			      <img src="http://www.saraisactour.com.ve/wp-content/uploads/2015/08/10731206_536512903152774_766969267735247532_n.jpg" width="100%" height="200px">
+			      <img src="<?php bloginfo('url'); ?>/wp-content/uploads/2015/08/10731206_536512903152774_766969267735247532_n.jpg" width="100%" height="200px">
 			</div>
 			<!-- FIN CONTENEDOR SLIDER PRINCIPAL -->
 			<div class="row ">
@@ -81,3 +81,5 @@
   </section> <!-- Fin de main -->
 
   <?php get_footer(); ?>
+
+  

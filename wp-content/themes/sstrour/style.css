@@ -142,3 +142,13 @@ body{
  blockquote{
   border-left: 5px solid #ef6c00 !important;
  }
+ .foo{
+  padding-top: 0px !important;
+ }
+
+ .no-found .page-header{
+  margin: 20% 0px 10% 0px;
+ }
+ .no-found .btn-home{
+  margin-bottom: 10%;
+ }

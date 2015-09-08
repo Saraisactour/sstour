@@ -109,6 +109,14 @@ register_sidebar(array(
         'after_title' => '</h3>',
     ));
 
+register_sidebar(array(
+        'name' => 'Sidebar Contacts',
+        'description' => '',
+        'before_widget' => '<section class="widget">',
+        'after_widget' => '</section>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ));
 /////////////////////////////////////////////////////////////////
 // Info
 function infobox( $atts, $content = null, $code = "" ) {
@@ -127,10 +135,4 @@ function infobox( $atts, $content = null, $code = "" ) {
 
 // El ShortCode
 add_shortcode( 'info', 'infobox' );
-
-
-function shortcode_gracias() {
-  return '<p>¡Gracias por leer mi blog!, si te gustó suscríbete al feed RSS</p>';
-}
-add_shortcode('gracias', 'shortcode_gracias');
 ?>

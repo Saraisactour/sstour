@@ -4,16 +4,18 @@
   	  	<div class="row">
           <div class="col s1 left-align"></div>
         <!-- BARRA IZQUIERDA -->
-        <div class="col s12 m2 l2 left-align">
+        <div class="brr-izq col s12 m2 l2 left-align">
               <form method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
             <input type="text" placeholder="Buscar full day..." value="<?php the_search_query(); ?>" name="s" id="s" />
             <!--<button type="submit" class="right-text btn waves-effect waves-light condensed "  id="searchsubmit"><i class="tiny mdi-action-search black-text"></i></button>-->
           </form>
-          <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Left Sidebar')) : endif; ?>
+          <div class="dynamic_sidebar hide-on-small-only">
+            <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Left Sidebar')) : endif; ?>
+          </div>
           <br>
-          <a class="btn waves-effect waves-light green condensed" href="#">Alle Saugroboter</a>
-      <a class="btn waves-effect waves-light blue condensed" href="#">Saugroboter-Vergleich</a>
-      <img src="http://www.saraisactour.com.ve/wp-content/uploads/2015/08/10731206_536512903152774_766969267735247532_n.jpg" width="100%" height="200px">
+          <a class="btn waves-effect waves-light green condensed" href="#">Franquicias</a>
+          <a class="btn waves-effect waves-light blue condensed" href="#">Nuestro Equipo</a>
+          <img class="hide-on-small-only" src="<?php bloginfo('url'); ?>/wp-content/uploads/2015/08/10731206_536512903152774_766969267735247532_n.jpg" width="100%" height="200px">
         </div>
         <!-- FIN BARRA IZQUIERDA -->
         <!-- CONTENEDOR PRINCIPAL -->
@@ -38,7 +40,7 @@
                     <div class="col s12 m6 l6 right-align reser">
                       <span class="btn-flat disabled">Bs. <?php echo get_post_meta($post->ID, "Precio", $single = true); ?></span>
                       
-                      <a class="waves-effect waves-light btn-large orange darken-3"><i class="material-icons left">perm_contact_calendar</i>Reservar</a>
+                      <a href="http://localhost/reservacion/view/create.php?ID=<?php echo $post->ID;?>" class="waves-effect waves-light btn-large orange darken-3"><i class="material-icons left">perm_contact_calendar</i>Reservar</a>
                     </div>
                   </div>
 

@@ -1,20 +1,20 @@
-<footer class="page-footer  blue darken-1">
-          <div class="container">
+<footer class="page-footer foo blue darken-1">
+          <!-- <div class="container">
             <div class="row">
               <div class="col s12 m3 l3">
-                <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer_1')) : endif; ?>
+                <?php //if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer_1')) : endif; ?>
               </div>
               <div class="col s12 m3 l3">
-                <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer_2')) : endif; ?>
+                <?php //if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer_2')) : endif; ?>
               </div>
               <div class="col s12 m3 l3">
-                <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer_3')) : endif; ?>
+                <?php //if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer_3')) : endif; ?>
               </div>
               <div class="col s12 m3 l3">
-                <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer_4')) : endif; ?>
+                <?php //if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer_4')) : endif; ?>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="footer-copyright">
             <div class="container">
             © 2014 Copyright <?php bloginfo('name'); ?> , <?=date('Y');?>
