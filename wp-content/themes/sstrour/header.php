@@ -31,11 +31,11 @@
 			<div class="col s12 m4 l4"></div>
 		</div>
 	</div> -->
-	
+
 	<div class="wrapper" id="inicio">
 		<header>
 			<nav>
-				<a href="#!" class="brand-logo blue-text">Logo</a>
+				<a href="#!" class="brand-logo blue-text"><img src="<?php bloginfo('url'); ?>/wp-content/uploads/2015/09/logo-solo-para-pagina.png" width="100px" style="margin-top: -10px;"></a>
 				<?php wp_nav_menu(array(
 					'container' => false,    // para que no tenga contenedor
 					'menu_class' => 'right hide-on-med-and-down',
