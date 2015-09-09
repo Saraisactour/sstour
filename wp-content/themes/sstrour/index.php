@@ -14,9 +14,10 @@
 				<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Left Sidebar')) : endif; ?>
 			</div>
 			<br>
+			<img class="hide-on-small-only" src="<?php bloginfo('url'); ?>/wp-content/uploads/2015/08/10731206_536512903152774_766969267735247532_n.jpg" width="100%" height="200px">
+			<br><br>
 			<a class="btn waves-effect waves-light green condensed" href="#">Franquicias</a>
           	<a class="btn waves-effect waves-light blue condensed" href="#">Nuestro Equipo</a>
-			<img class="hide-on-small-only" src="<?php bloginfo('url'); ?>/wp-content/uploads/2015/08/10731206_536512903152774_766969267735247532_n.jpg" width="100%" height="200px">
 		</div>
 		<!-- FIN BARRA IZQUIERDA -->
 

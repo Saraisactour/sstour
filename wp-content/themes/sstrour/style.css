@@ -152,3 +152,8 @@ body{
  .no-found .btn-home{
   margin-bottom: 10%;
  }
+
+ .slogan{
+    float: left;
+    margin-left: 80px;
+ }
