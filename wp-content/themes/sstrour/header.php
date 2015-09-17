@@ -32,10 +32,10 @@
 		</div>
 	</div> -->
 
-	<div class="wrapper" id="inicio">
-		<header>
+	<div class="wrapper">
+		<header id="inicio">
 			<nav>
-				<a href="<?php bloginfo('url'); ?>" class="brand-logo blue-text"><img src="<?php bloginfo('url'); ?>/wp-content/uploads/2015/09/logo-solo-para-pagina.png" width="100px" style="margin-top: -10px;"></a>
+				<a href="<?php bloginfo('url'); ?>" class="brand-logo blue-text"><img src="<?php bloginfo('url'); ?>/wp-content/uploads/2015/09/logo-solo-para-pagina.png" width="100px" height="65px" style="margin-top: -10px;"></a>
 				<img class="slogan hide-on-small-only" src="<?php bloginfo('url'); ?>/wp-content/uploads/2015/09/full-day-de-experiencia.png">
 				<?php wp_nav_menu(array(
 					'container' => false,    // para que no tenga contenedor

@@ -7,6 +7,8 @@ $(document).ready(function() {
   	$('.wpcf7-submit').addClass('btn orange darken-3');
   	$('.wpcf7-textarea').addClass('materialize-textarea');
 
+    $('.modal-trigger').leanModal();
+
   	//$('#modal1').openModal();
 
   	//ACTIVAR MODAL DE SUBCRIPCION

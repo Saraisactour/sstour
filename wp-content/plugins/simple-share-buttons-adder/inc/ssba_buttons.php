@@ -58,7 +58,7 @@ function show_share_buttons($content, $booShortCode = FALSE, $atts = '') {
         $intPostID = get_the_ID();
 
         // ssba div
-        $htmlShareButtons = '<!-- Simple Share Buttons Adder ('.SSBA_VERSION.') simplesharebuttons.com --><div class="ssba ssba-wrap col s12 m6 l6">';
+        $htmlShareButtons = '<!-- Simple Share Buttons Adder ('.SSBA_VERSION.') simplesharebuttons.com --><div class="ssba ssba-wrap">';
 
         // center if set so
         $htmlShareButtons.= '<div style="text-align:'.$arrSettings['ssba_align'].'">';
@@ -780,23 +780,8 @@ function ssba_buffer($arrSettings, $urlCurrentPage, $strPageTitle, $booShowShare
 
 // get tumblr button
 function ssba_tumblr($arrSettings, $urlCurrentPage, $strPageTitle, $booShowShareCount) {
-
-    // check if http:// is included
-    if (preg_match('[http://]', $urlCurrentPage)) {
-
-        // remove http:// from URL
-        $urlCurrentPage = str_replace('http://', '', $urlCurrentPage);
-    } else if (preg_match('[https://]', $urlCurrentPage)) { // check if https:// is included
-
-            // remove http:// from URL
-            $urlCurrentPage = str_replace('https://', '', $urlCurrentPage);
-        }
-
-    // strip http:// or https:// from URL (tumblr doesn't work with this set)
-    $urlCurrentPage =  str_replace("http://", '', $urlCurrentPage);
-
     // tumblr share link
-    $htmlShareButtons = '<a data-site="tumblr" class="ssba_tumblr_share" href="http://www.tumblr.com/share/link?url=' . $urlCurrentPage . '&amp;name=' . $strPageTitle . '" ' . ($arrSettings['ssba_share_new_window'] == 'Y' ? ' target="_blank" ' : NULL) . ($arrSettings['ssba_rel_nofollow'] == 'Y' ? ' rel="nofollow" ' : NULL) . '>';
+    $htmlShareButtons = '<a data-site="tumblr" class="ssba_tumblr_share" href="http://www.tumblr.com/share/link?url=' . $urlCurrentPage . '" ' . ($arrSettings['ssba_share_new_window'] == 'Y' ? ' target="_blank" ' : NULL) . ($arrSettings['ssba_rel_nofollow'] == 'Y' ? ' rel="nofollow" ' : NULL) . '>';
 
     // if image set is not custom
     if ($arrSettings['ssba_image_set'] != 'custom') {

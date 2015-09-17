@@ -61,6 +61,9 @@ body{
  .card-category{
   font-size: 14px;
  }
+ .card-category blockquote{
+  margin: 20px 10px 0px 10px;
+ }
  .card-category ul{
   margin: 0;
   margin-top: -4%;
@@ -156,4 +159,26 @@ body{
  .slogan{
     float: left;
     margin-left: 80px;
+    height: inherit !important;
+ }
+ a.brand-logo.blue-text{
+  height: inherit !important;
+ }
+ .card-index{
+  min-height: 430px;
+ }
+ .content-article .content ul{
+  padding-left: 25px !important;
+ }
+ .content-article .content ul li{
+  list-style-type: initial;
+ }
+ .card-action span{
+  float: left;
+ }
+ .card-action a{
+  float: right;
+ }
+ .no-padding{
+  padding: 0;
  }

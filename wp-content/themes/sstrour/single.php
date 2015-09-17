@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-  	<section id="main">
-  	  	<div class="row">
+    <section id="main">
+        <div class="row">
           <div class="col s1 left-align"></div>
         <!-- BARRA IZQUIERDA -->
         <div class="brr-izq col s12 m2 l2 left-align">
@@ -22,25 +22,27 @@
         <div class="col s12 m6 l6 card-panel">
             <article id="single">
               <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
-                  <h4 class="entry-title">
-                   <a class="tex-dark hide-on-large-only" title="Permanent link to <?php the_title_attribute(); ?>" rel="bookmark" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                  <h4 class="entry-title hide-on-large-only">
+                   <a class="tex-dark" title="Permanent link to <?php the_title_attribute(); ?>" rel="bookmark" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                   </h4>
                   <?php
                       if ( has_post_thumbnail() ) {
-                      the_post_thumbnail('featured-medium', array( 'class' => 'materialboxed responsive-img' ));
+                      the_post_thumbnail('full', array( 'class' => 'materialboxed responsive-img' ));
                       }else{
-                        ?><img src="http://placehold.it/320x195"><?php
+                        ?><img class="responsive-img" src="http://placehold.it/660x385"><?php
                       }
                   ?>
                   <span class="card-title hide-on-small-only"><h4 class="white-text condensed light"> <?php the_title(); ?></h4></span>
-                  <div class="content-article ">
+                  <div class="card-content content-article ">
                     <div class="content">
                       <p><?php echo the_content(); ?></p>
                     </div>
-                    <div class="col s12 m6 l6 right-align reser">
-                      <span class="btn-flat disabled">Bs. <?php echo get_post_meta($post->ID, "Precio", $single = true); ?></span>
-                      
-                      <a href="http://localhost/reservacion/view/create.php?ID=<?php echo $post->ID;?>" class="waves-effect waves-light btn-large orange darken-3"><i class="material-icons left">perm_contact_calendar</i>Reservar</a>
+                    <div class="card-action">
+                      <div class="col s12 m12 l12 right-align reser">
+                        <span class="btn-flat disabled">Bs. <?php echo get_post_meta($post->ID, "Precio", $single = true); ?></span>
+                        
+                        <a href="http://localhost/reservacion/view/create.php?ID=<?php echo $post->ID;?>" class="waves-effect waves-light btn-large orange darken-3"><i class="material-icons left">perm_contact_calendar</i>Reservar</a>
+                      </div>
                     </div>
                   </div>
 
@@ -58,6 +60,26 @@
         <!-- FIN BARRA DERECHA -->
         </div>
   </section> <!-- Fin de main -->
+  <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">add</i>
+    </a>
+    <ul>
+      <!--<li><a class="btn-floating yellow darken-1"><i class="material-icons">insert_chart</i></i></a></li> -->
+      <li><a class="btn-floating green tooltipped" data-position="left" data-delay="50" data-tooltip="Escribenos" href="<?php bloginfo('url'); ?>/contactos"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating orange darken-3 tooltipped" data-position="left" data-delay="50" data-tooltip="Reservar" href="http://localhost/reservacion/view/create.php?ID=<?php echo $post->ID;?>"><i class="material-icons">perm_contact_calendar</i></a></li>
+      <li><a class="btn-floating blue tooltipped modal-trigger" data-position="left" data-delay="50" data-tooltip="Banco" href="#moda-bank"><i class="material-icons">payment</i></a></li>
+    </ul>
+  </div>
+  <!-- Modal Structure -->
+  <div id="moda-bank" class="modal">
+    <div class="modal-content">
+      <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Bank Sidebar')) : endif; ?>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
+    </div>
+  </div>
   <?php  get_sidebar()?>
 
 <?php get_footer(); ?>

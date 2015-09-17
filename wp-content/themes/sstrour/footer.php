@@ -24,7 +24,7 @@
               </div>
             </div>
             
-            <a href="#inicio" id="toTop" style="display: inline;"><span id="toTopHover" style="opacity: 0;"></span>To Top</a>
+            <!-- <a href="#inicio" id="toTop" style="display: inline;"><span id="toTopHover" style="opacity: 0;"></span>To Top</a> -->
             </div>
           </div>
         </footer>

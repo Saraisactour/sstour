@@ -24,7 +24,7 @@
 	    	?>
 	    	<?php while ( have_posts() ) : the_post(); ?>
 	        <article id="post-<?php the_ID(); ?>" class="col s12 m4 l4">
-	        	<div class="hoverable card">
+	        	<div class="hoverable card card-index">
 	        		<div class="card-image">
 			    		<?php
 			    		if ( has_post_thumbnail() ) {
@@ -36,7 +36,6 @@
 			    		 ?>
 			    		<span class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
 			    	</div>
-			    	<div class="card-content">
 			    		<span class="left-align card-category">
 			    			<blockquote>
 				    			<?php the_category($post_id->ID_post) ?>
@@ -44,13 +43,14 @@
 				    			<b><?php echo get_post_meta($post->ID, "Fecha", $single = true); ?></b>
 				    		</span> 
 				    		</blockquote>
-				    		
-				    	</span><?php echo get_excerpt(100); ?>
+				    	</span>
+				    <div class="card-content">
+				    	<p><?php echo get_excerpt(100); ?></p>
 				    </div>
 			    	<div class="card-action">
 		    			<span class="btn-flat disabled">Bs. <?php echo get_post_meta($post->ID, "Precio", $single = true); ?>
 		    			</span>
-		    			<a href="<?php the_permalink(); ?>" class="waves-effect orange darken-3 waves-light btn btn tooltipped" data-position="right" data-delay="50" data-tooltip="<?php the_title(); ?>">Ver</a>
+		    			<a href="<?php the_permalink(); ?>" class="waves-effect orange darken-3 waves-light btn btn">Ver</a>
 		            </div>
 	        	</div>
 	        </article>

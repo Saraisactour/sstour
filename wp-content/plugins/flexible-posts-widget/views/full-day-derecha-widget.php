@@ -17,33 +17,32 @@ if( $flexible_posts->have_posts() ):
 ?>
 	<section class=" row dpe-flexible-posts">
 	<?php while( $flexible_posts->have_posts() ) : $flexible_posts->the_post(); global $post; ?>
-		<article class="col s12 m6 l6 hoverable card small" id="post-<?php the_ID(); ?>">
-			<div class="card-image waves-effect waves-block waves-light">
-				<a class="img-arti" href="<?php echo the_permalink(); ?>">
-					<?php
-						if( $thumbnail == true ) {
-							// If the post has a feature image, show it
-							if( has_post_thumbnail() ) {
-								the_post_thumbnail( $thumbsize, array( 'class' => 'activator' ) );
-							// Else if the post has a mime type that starts with "image/" then show the image directly.
-							} elseif( 'image/' == substr( $post->post_mime_type, 0, 6 ) ) {
-								echo wp_get_attachment_image( $post->ID, $thumbsize );
-							}
-						}
-					?>
-				</a>
+		<div class="col s12 m8 no-padding offset-m2">
+			<div class="card hoverable">
+				<div class="card-image waves-effect waves-block waves-light">
+				<?php
+		    		if ( has_post_thumbnail() ) {
+						the_post_thumbnail(array( 'class' => 'responsive-img activator' ));
+					}else{
+						?><img class="responsive-img activator" src="http://placehold.it/300x159"><?php
+					}
+		    	?>
+		    	</div>
+		    	<div class="card-content">
+			      <span class="card-title activator grey-text text-darken-3"><h6><b><?php the_title(); ?></b></h6></span>
+			    </div>
+			    <div class="card-reveal"> 
+			      <span class="card-title grey-text text-darken-4"><h6><b><?php the_title(); ?></b><i class="material-icons right" style="
+    font-size: 16px;">close</i></h6></span>
+			      <p class="truncate"><?php echo get_excerpt(100); ?></p>
+			      <div class="card-action">
+	    			<span class="btn-flat disabled no-padding tiny">Bs. <?php echo get_post_meta($post->ID, "Precio", $single = true); ?>
+	    			</span>
+	    			<a href="<?php the_permalink(); ?>" class="waves-effect orange darken-3 waves-light btn small right">Ver</a>
+	               </div>
+			    </div>
 			</div>
-			<div class="conte-card card-content">
-				<span class="card-title activator grey-text text-darken-4">
-					<h6><?php the_title(); ?><i class="material-icons right">more_vert</i></h6>
-				</span>
-			</div>
-			<div class="card-reveal">
-		      <span class="card-title grey-text text-darken-4"><?php the_title(); ?><i class="material-icons right">close</i></span>
-		      <p><?php echo get_excerpt(100); ?></p>
-		      <a href="<?php the_permalink(); ?>" class="waves-effect orange darken-3 waves-light btn btn">Ver</a>
-		    </div>
-		</article>
+		</div>
 	<?php endwhile; ?>
 	</section><!-- .dpe-flexible-posts -->
 <?php else: // We have no posts ?>

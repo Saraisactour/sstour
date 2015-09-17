@@ -117,6 +117,14 @@ register_sidebar(array(
         'before_title' => '<h3>',
         'after_title' => '</h3>',
     ));
+register_sidebar(array(
+        'name' => 'Bank Sidebar',
+        'description' => 'Datos bancarios',
+        'before_widget' => '<section class="widget">',
+        'after_widget' => '</section>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ));
 /////////////////////////////////////////////////////////////////
 // Info
 function infobox( $atts, $content = null, $code = "" ) {
