@@ -89,6 +89,7 @@
 					<p><?php _e('No hay Datos Cargados .'); ?></p>
 				<?php endif; ?>
 			</div>
+			<?php if (function_exists('wp_corenavi')) wp_corenavi(); ?>
 		</div>
 		<!-- FIN CONTENEDOR PRINCIPAL -->
 	</div>
